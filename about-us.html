@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="stylesheets/aboutus.css">
+    <link red="stylesheet" href="stylesheets/overlay.css">
+    <link rel="stylesheet" href="stylesheets/register-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +66,7 @@
           <div class="container-card">
             <h2>Panainte Andrei</h2>
             <p class="title">Sugaci</p>
-            <p>example@example.com</p>
+            <p>andreipnt10@gmail.com</p>
             <p><a href="https://www.facebook.com/andrei.panainte.39" target="_blank"><button class="button">Facebook</button></a></p>
           </div>
         </div>
@@ -83,18 +85,50 @@
       </div>
     </div>
 
-  <button type="button" class="contact" onclick="on()"><b>Contacteaza-ne</b></button>
+  <button type="button" class="contact" onClick="on()"><b>Contacteaza-ne</b></button>
     
+    <!-- Overlay become member -->
+  <div id="overlay">
+    <div class="user">
+      <header class="user__header">
+        
+        <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
+      </header>
+    
+      <form class="form">
+        <div class="form__group">
+            <input type="text" placeholder="Username" class="form__input" />
+        </div>
+        
+        <div class="form__group">
+            <input type="email" placeholder="Email" class="form__input" />
+        </div>
+        
+        <div class="form__group">
+            <input type="password" placeholder="Password" class="form__input" />
+        </div>
+
+        <div class= "form_group txt">
+            <textarea placeholder="De ce sunteti potrivit pentru a fi membru al echipei..." class="form__input"></textarea>
+        </div>
+        
+        <button class="btn" type="button">Register</button>
+        <button class="btn close" type="button" onClick="off()">Go back</button>
+      </form>
+    </div>
+  </div>
+
   <footer class="myFooter">
     <a href="#instagram" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
     <a href="#instagram" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
     <a href="#instagram" class="fa-icons"> <i class="fa fa-share" aria-hidden="true"></i></a>
     <a href="about-us.html" class="fa-icons"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     <p class="copyright">Created by Panainte Andrei, Mariciuc Ioan and Cristi Cerbu.</p>
-   </footer>
+  </footer>
 </body>
 
 <script src="index.js"></script>
 <script src="scripts/about-us/accordion-nav.js"></script>
 <script src="scripts/about-us/navbar-shrink.js"></script>
+<script src="scripts/overlay.js"></script>
 </html>

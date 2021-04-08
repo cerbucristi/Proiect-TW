@@ -27,14 +27,14 @@
     animation: arrive 100ms ease-in-out 0.1s forwards;
 }
 
+textarea {
+    max-height: fit-content;
+}
+
 .form--no {
     animation: NO 1s ease-in-out;
     opacity: 1;
     transform: translate3d(0, 0, 0);
-}
-
-.txt {
-    padding-top: 1vh;
 }
 
 .form__input {
