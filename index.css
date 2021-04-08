@@ -4,7 +4,10 @@ body{
   background-color: #eeeedd;
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+
 }
+
+
 
 .topnav{
     height: 4em;
@@ -73,6 +76,7 @@ body{
       padding-bottom:11em;
     }
     .topnav.responsive a.icon {
+      
       position: absolute;
       right: 0;
       top: 0;
@@ -335,6 +339,23 @@ body{
     border: 5px solid #666633;
   }
 
+  @media screen and (max-width: 600px) {
+    .membership
+    { width: 55vw;
+      height: 5vh;
+      border: 3px solid #666633;
+      margin-left: 20%;
+      font-size: 0.7em;
+      margin-bottom: 2%;
+    }
+
+    .membership:hover{
+      background-color: #eeeedd;
+      color: #666633;
+      border: 2px solid #666633;
+    }
+  }
+
   .myFooter{
     margin-top: 25px;
     width: 100%;
@@ -363,3 +384,5 @@ body{
   color:#99994d;
   margin-bottom:0;
   }
+
+
