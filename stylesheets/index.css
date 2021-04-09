@@ -1,105 +1,16 @@
-* {box-sizing:border-box}
+/* ------ Slideshow BEGINNING */
 
-body{
-  background-color: #eeeedd;
-  margin: 0;
-  font-family: "Roboto";
-}
-
-.topnav{
-    height: 4em;
-    margin-bottom: 2vh;
-    background-color: #f6f6ee;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border-bottom: 3px solid #006600;
-    padding-top: 1vh;
-    padding-right: 1vw;
-    padding-bottom: 1.5vh;
-    z-index: 100;
-}
-
-
-.topnav a{
-    background-color: #99994d;
-    margin-top: 1vh;
-    border: 3px solid #55552b;
-    display: block;
-    float: right;
-    margin-left: 5px;
-    outline: none;
-    color: #eeeedd;
-    font-size: 19px;
-    text-decoration: none;
-    padding: 2px;
-    border-radius: 10px;
-}
-
-.topnav a:hover{
-    background-color: #eeeedd ;
-    color: #666633;
-}
-
-.topnav a.active{
-  border: 3px solid #55552b;
-  background-color: #55552b;
-}
-
- a.active:hover{
-  border: 3px solid #55552b;
-  background-color: #55552b;
-  color:#eeeedd ;
-}
-
-.topnav .icon {
-    display: none;
-  }
-
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {
-      padding-bottom:11em;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction:row;
-    }
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: flex;
-      flex-basis: 100%;
-      text-align: left;
-    }
-  }
-  /* Slideshow container */
 .slideshow-container {
-    max-width: 100vw;
+    display: block;
     position: relative;
     margin-top: 9vh;
-    display: block;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
+}
+
+.slide {
     display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
+}
+
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -112,21 +23,20 @@ body{
     transition: 0.6s ease;
     border-radius: 25px;
     user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+}
+    
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 25px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: #666633 ;
-  }
-  
-  /* Caption text */
-  .text {
+}
+    
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: #6666337e;
+}
+    
+.text {
     color: #f2f2f2;
     font-size: 3em;
     padding: 8px 12px;
@@ -134,71 +44,73 @@ body{
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  
-  /* Fading animation */
-  .fade {
+}
+      
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+}
+
+@media screen and (max-width : 600px){
+    .text{
+        font-size: 1.5em;
+    }
+    .prev, .next{
+        font-size: 8px;
+    }    
+}
   
-  @media screen and (max-width : 600px){
-        .text{
-            font-size: 1em;
-        }
-        .prev, .next{
-            font-size: 8px;
-        }
-      
-  }
-
-
-  @-webkit-keyframes fade {
+@-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
-  
-  @keyframes fade {
+}
+    
+@keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+}
 
-  .middle-text{
-      padding-left: 1vw;
-      margin-left: 1vw;
-      margin-right: 1vw;
-      margin-top: 2vh;
-      border: 4px solid #666633;
-      border-style: dashed;
-      border-radius: 5px;
-      color:#666633 ;
-      animation: bounce 2s infinite;
-  }
+/* ------ Slideshow END */
 
-  @keyframes bounce{
+/* ------ Text BEGINNING */
+
+.middle-text {
+    padding: 0vw 1.5vw 0vw 1.5vw;
+    margin: 2vh 2vw;
+    display: flex;
+    border: 4px dashed #666633;
+    color: #666633;
+    animation: bounce 2s infinite;
+}
+
+@media screen and (max-width : 600px){
+    .middle-text {
+        display:block;
+    }
+}
+  
+@keyframes bounce{
     0% {
-      transform: translate(0, 4x);
+        transform: translate(0, 4px);
     }
-    50%{
-      transform: translate(0, 8px);
+    50% {
+        transform: translate(0, 8px);
     }
-  }
+}
 
-  /* The actual timeline (the vertical ruler) */
+/* ------ Text END */
+
+/* ------ Timeline BEGINNING */
+
 .timeline {
     position: relative;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-     margin-top: 5vh;
-    background-color:#eeeedd;
+    margin: 5vh auto;
   }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+
+.timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -207,43 +119,37 @@ body{
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container {
+}
+    
+.container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .container::after {
+}
+
+.container::after {
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
     right: -17px;
     background-color:#666633;
-;
     border: 4px solid #003300;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+    
+.left {
     left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
+}
+    
+.right {
     left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+}
+
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -254,10 +160,9 @@ body{
     border: medium solid #666633;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #666633;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+}
+
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -268,117 +173,47 @@ body{
     border: medium solid #666633;
     border-width: 10px 10px 10px 0;
     border-color: transparent #666633 transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
+}
+    
+
+.right::after {
     left: -16px;
-  }
-  
-  /* The actual content */
-  .content {
+}
+    
+.content {
     padding: 20px 30px;
     background-color: #99994d;
     position: relative;
     border-radius: 6px;
     border: 4px solid #666633;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
     .timeline::after {
-      left: 31px;
+        left: 31px;
     }
-  
-  /* Full-width containers */
+    
     .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
     }
-  
-  /* Make sure that all arrows are pointing leftwards */
+    
     .container::before {
-      left: 60px;
-      border: medium solid #99994d;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent #99994d transparent transparent;
+        left: 60px;
+        border: medium solid #99994d;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #99994d transparent transparent;
     }
-  
-  /* Make sure all circles are at the same spot */
+    
     .left::after, .right::after {
-      left: 15px;
+        left: 15px;
     }
-  
-  /* Make all right containers behave like the left ones */
+    
     .right {
-      left: 0%;
+        left: 0%;
     }
-  }
+ }
 
-  .membership{
-    width: 15vw;
-    height: 8vh;
-    margin-left: 40%;
-    margin-bottom: 1%;
-    border: 5px solid #666633;
-    border-radius: 5px;
-    outline: none;
-    background-color: #99994d;
-    cursor: pointer;
-    color: white;
-    font-size: 15px;
-  }
-
-  .membership:hover{
-    background-color: #eeeedd;
-    color: #666633;
-    border: 5px solid #666633;
-  }
-
-  @media screen and (max-width: 600px) {
-    .membership
-    { width: 55vw;
-      height: 5vh;
-      border: 3px solid #666633;
-      margin-left: 20%;
-      font-size: 0.7em;
-      margin-bottom: 2%;
-    }
-
-    .membership:hover{
-      background-color: #eeeedd;
-      color: #666633;
-      border: 2px solid #666633;
-    }
-  }
-
-  .myFooter{
-    margin-top: 25px;
-    width: 100%;
-    background-color: #1a1a00;
-    height: 30vh;
-  }
-
-  .fa-icons{
-    font-size: 30px;
-    color: #99994d;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    margin-left: 1%;
-    margin-top: 1%;
-    background-color: #666633;
-    border-radius: 25px;
-    border: 2px solid #99994d; 
-  }
-
-  .copyright{
-  padding-top: 7em;
-  text-align:center;
-  font-size:13px;
-  color:#99994d;
-  margin-bottom:0;
-  }
+/* ------ Timeline END */

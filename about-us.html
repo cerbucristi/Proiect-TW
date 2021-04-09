@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="stylesheets/index.css">
+  <link rel="stylesheet" href="stylesheets/base.css">
   <link rel="stylesheet" href="stylesheets/aboutus.css">
   <link rel="stylesheet" href="stylesheets/overlay.css">
-  <link rel="stylesheet" href="stylesheets/register-form.css">
+  <link rel="stylesheet" href="stylesheets/form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,8 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
-    <img src="images/logo.png" id="myLogo">
+  <div class="topnav" id="navigation-bar">
+    <img src="images/logo.png" id="logo" onClick="onLogoClick()">
     <a href="about-us.html" class="active"><b>Despre noi</b></a>
     <a href="#media"><b>Media</b></a>
     <a href="index.html"><b>Acasa</b></a>
@@ -42,6 +42,24 @@
     <div class="accordion-panel">
       Comunitatea noastra este formata din voluntari care doresc sa ajute la 
       prosperitatea agricultorilor, deci <b>costurile sunt 0!</b>
+    </div>
+
+    <button class="accordion-info">Meeting anual...</button>
+    <div class="accordion-panel">
+     In fiecare an, echipa noastra organizeaza un meeting al fermierilor in unul din marile orase ale tarii unde va veti putea inscrie printr-un formular si astfel
+     puteti participa in mod gratuit la o exeperienta unica, unde veti avea ocazia de a face schimb de idei si tehnici cu alti pasionati! Stati cu ochii pe noi!
+    </div>
+
+    <button class="accordion-info">Profesionalism...</button>
+    <div class="accordion-panel">
+      Îl sprijinim pe fermierul român cu soluții eficiente de logistică, de management, de finanțare, precum și cu produse de calitate,
+      astfel încât rodul muncii sale să fie cât mai bun.
+    </div>
+    
+    <button class="accordion-info">Performanta fara indoiala...</button>
+    <div class="accordion-panel">
+      Suntem mereu cu un pas înainte, cu ajutorul noilor tehnologii și modele de business, în efortul de a transforma agricultura intensivă 
+      în agricultură inteligentă pentru fermierul român.
     </div>
   </div>
 
@@ -85,10 +103,12 @@
     </div>
   </div>
 
-  <button type="button" class="contact" onClick="on()"><b>Contacteaza-ne</b></button>
+  <span>
+    <button type="button" class="important-button" onClick="on()"><b>Contacteaza-ne</b></button>
+  </span>
     
   <!-- Overlay become member -->
-  <div id="overlay">
+  <div class="overlay">
     <div class="user">
       <header class="user__header">
         <h1 class="user__title"><b>Vrei sa transmiti un mesaj echipei ?</b></h1>
@@ -113,17 +133,20 @@
     </div>
   </div>
 
-  <footer class="myFooter">
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-share" aria-hidden="true"></i></a>
-    <a href="about-us.html" class="fa-icons"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-    <p class="copyright">Created by Panainte Andrei, Mariciuc Ioan and Cristi Cerbu.</p>
+  <footer>
+    <a href="#" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-tumblr" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-yahoo" aria-hidden="true"></i></a>
+    <p>Created by a passionate team.<br>
+      &#169; All rights reserved.</p>
   </footer>
 </body>
 
-<script src="scripts/index.js"></script>
+<script src="scripts/navbar.js"></script>
 <script src="scripts/overlay.js"></script>
 <script src="scripts/about-us/accordion-nav.js"></script>
-<script src="scripts/about-us/navbar-shrink.js"></script>
 </html>

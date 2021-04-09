@@ -4,6 +4,8 @@ body {
   font-family: "Roboto";
 }
 
+/* ------ Accordions BEGINNING */
+
 #accordions {
   padding: 15px 15px;
   margin-top: 10vh;
@@ -32,6 +34,10 @@ body {
   margin-bottom: 1vw;
 }
 
+.accordion-active {
+  margin-top: 1vw;
+}
+
 .accordion-info:after {
   content: '\002B';
   color: #777;
@@ -51,19 +57,16 @@ body {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-  
+
+/* ------ Accordions END */
+
+/* ------ Contact cards BEGINNING */
+
 .column {
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 8px;
-}
-  
-@media screen and (max-width: 650px) {
-   .column {
-    width: 100%;
-    display: block;
-  }
 }
   
 .card {
@@ -93,7 +96,6 @@ body {
 .button {
   border: none;
   outline: 0;
-  display: inline-block;
   padding: 8px;
   color: white;
   background-color: #4267B2;
@@ -104,29 +106,23 @@ body {
   
 .button:hover {
   background-color: #555;
-  }
-
-.contact {
-  width: 15vw;
-  height: 8vh;
-  margin-top: 4vh;
-  margin-left: 40%;
-  margin-bottom: 1%;
-  border-radius: 5px;
-  outline: none;
-  background-color: #4267B2;
-  cursor: pointer;
-  color: white;
-  font-size: 15px;
 }
 
 @media screen and (max-width: 600px) {
-  .contact
-  { width: 55vw;
-    height: 5vh;
-    border: 3px solid #666633;
-    margin-left: 20%;
-    font-size: 0.7em;
-    margin-bottom: 2%;
+  .column {
+    width: 100%;
+    display: block;
   }
 }
+
+/* ------ Contact cards END */
+
+/* ------ Contact button BEGINNING */
+
+span {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+/* ------ Contact button END */

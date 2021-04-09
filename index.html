@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="stylesheets/base.css">
   <link rel="stylesheet" href="stylesheets/index.css">
   <link rel="stylesheet" href="stylesheets/overlay.css">
-  <link rel="stylesheet" href="stylesheets/register-form.css">
+  <link rel="stylesheet" href="stylesheets/form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
-    <img src="images/logo.png" id="myLogo">
+  <div class="topnav" id="navigation-bar">
+    <img src="images/logo.png" id="logo" onClick="onLogoClick()">
     <a href="about-us.html"><b>Despre noi</b></a>
     <a href="#media"><b>Media</b></a>
     <a href="#home" class="active"><b>Acasa</b></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="responsiveIcon()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -25,24 +26,24 @@
   <div class="slideshow-container">
 
       <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
+    <div class="slide fade">
       <img src="images/slides/pic1.png" style="width: 100%;">
-      <div class="text">Servicii de calitate</div>
+      <div class="text" id="slideshow1"></div>
     </div>
       
-    <div class="mySlides fade">
+    <div class="slide fade">
       <img src="images/slides/pic2.png" style="width: 100%;">
-      <div class="text">Comunitate stransa</div>
+      <div class="text" id="slideshow2"></div>
     </div>
       
-    <div class="mySlides fade">
+    <div class="slide fade">
       <img src="images/slides/pic3.png" style="width: 100%;">
-      <div class="text">Suport garantat</div>
+      <div class="text" id="slideshow3"></div>
     </div>
       
       <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="switchSlide(-1)">&#10094;</a>
+    <a class="next" onclick="switchSlide(1)">&#10095;</a>
   </div>
 
   <div class="middle-text">
@@ -57,22 +58,26 @@
   <div class="timeline">
     <div class="container left">
       <div class="content">
-        <h2>2017</h2>
-        <p>Lorem ipsum..</p>
+        <h2>Motto-ul nostru</h2>
+        <p>"Pentru agricultori dorinţele rămân ferme."</p>
       </div>
     </div>
     
     <div class="container right">
       <div class="content">
-        <h2>2016</h2>
-        <p>Lorem ipsum..</p>
+        <h2>Implicare si devotament!</h2>
+        <p>Datorita chat-ului nostru puteti oricand sa va expuneti curiozitatile si nelamuririle,
+          urmand sa fiti consultati de oameni profesionisti si la fel de pasionati precum dumneavoastra!
+          </p>
       </div>
     </div>
 
     <div class="container left">
       <div class="content">
-          <h2>2018</h2>
-          <p>Lorem ipsum..</p>
+          <h2>Nu renunta la visele tale!</h2>
+          <p>Oricat de greu ar fi sa razbati in aceasta industrie, nu uita niciodata ca ai plecat la drum cu gandul de a reusi!
+            Noi suntem aici sa-ti usuram calatoria, profita de sprijinul nostru oricand simti nevoia!
+            </p>
       </div>
     </div>
   </div>
@@ -82,20 +87,24 @@
     De aceea aceasta platforma este o inovatie; ea leaga fermieri de peste tot din tara, atingand nivelul de Comunitate. Daca doresti sa devii membru al
     acestei familii prospere, este doar un pas de facut.</p>
     
-    <button type="button" class="membership" onClick="on()"><b>Devino membru chiar acum!</b></button>
+    <button type="button" class="important-button" onClick="on()"><b>Devino membru chiar acum!</b></button>
   </div>
 
-  <footer class="myFooter">
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="#instagram" class="fa-icons"> <i class="fa fa-share" aria-hidden="true"></i></a>
-    <a href="index.html" class="fa-icons"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-    <p class="copyright">Created by Panainte Andrei, Mariciuc Ioan and Cristi Cerbu.</p>
+  <footer>
+    <a href="#" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-tumblr" aria-hidden="true"></i></a>
+    <a href="#" class="fa-icons"> <i class="fa fa-yahoo" aria-hidden="true"></i></a>
+    <p>Created by a passionate team.<br>
+      &#169; All rights reserved.</p>
   </footer>
 
 
     <!-- Overlay become member -->
-  <div id="overlay">
+  <div class="overlay">
     <div class="user">
       <header class="user__header">
         <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
@@ -125,6 +134,7 @@
   </div>
 </body>
 
-<script src="scripts/index.js"></script>
+<script src="scripts/navbar.js"></script>
+<script src="scripts/slideshow.js"></script>
 <script src="scripts/overlay.js"></script>
 </html>
