@@ -1,129 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="stylesheets/overlay.css">
-    <link rel="stylesheet" href="stylesheets/register-form.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <link rel="stylesheet" href="stylesheets/overlay.css">
+  <link rel="stylesheet" href="stylesheets/register-form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <img src="logo.png" id="myLogo">
-        <a href="about-us.html"><b>Despre noi</b></a>
-        <a href="#media"><b>Media</b></a>
-        <a href="#home" class="active"><b>Acasa</b></a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+  <div class="topnav" id="myTopnav">
+    <img src="images/logo.png" id="myLogo">
+    <a href="about-us.html"><b>Despre noi</b></a>
+    <a href="#media"><b>Media</b></a>
+    <a href="#home" class="active"><b>Acasa</b></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+    <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="images/slides/pic1.png" style="width: 100%;">
+      <div class="text">Servicii de calitate</div>
     </div>
-
-        <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-        <img src="pic3.png" style="width: 100%;">
-        <div class="text">Servicii de calitate</div>
-        </div>
-    
-        <div class="mySlides fade">
-        <img src="pic1.png" style="width: 100%;">
-        <div class="text">Comunitate stransa</div>
-        </div>
-    
-        <div class="mySlides fade">
-        <img src="pic2.png" style="width: 100%;">
-        <div class="text">Suport garantat</div>
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+    <div class="mySlides fade">
+      <img src="images/slides/pic2.png" style="width: 100%;">
+      <div class="text">Comunitate stransa</div>
     </div>
-
-    <div class="middle-text">
-        <p><b>Misiune si pasiune!</b> <br> Aceasta este o platforma ce intruneste interesele comune, legate de agricultura,
-             ale fermierilor mari sau mici care doresc sa-si imbogateasca bagajul de cunostinte prin 
-            informatiile pe care le punem la dispozitie sau prin discutiile cu specialistii in domeniu 
-            care pot oferi suport de calitate oricand! Pasiunea pentru acest domeniu 
-            provine din deficitul de sprijin si incurajare de care au parte dragii nostri ferimieri, 
-            cei care muncesc cu drag pamantul,bun stravechi, pentru a produce bucate cat mai naturale!</p>
-
+      
+    <div class="mySlides fade">
+      <img src="images/slides/pic3.png" style="width: 100%;">
+      <div class="text">Suport garantat</div>
     </div>
+      
+      <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
 
-    <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <h2>2017</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2016</h2>
-            <p>Lorem ipsum..</p>
-          </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-              <h2>2018</h2>
-              <p>Lorem ipsum..</p>
-            </div>
-          </div>
+  <div class="middle-text">
+    <p><b>Misiune si pasiune!</b> <br> Aceasta este o platforma ce intruneste interesele comune, legate de agricultura, 
+      ale fermierilor mari sau mici care doresc sa-si imbogateasca bagajul de cunostinte prin 
+      informatiile pe care le punem la dispozitie sau prin discutiile cu specialistii in domeniu 
+      care pot oferi suport de calitate oricand! Pasiunea pentru acest domeniu 
+      provine din deficitul de sprijin si incurajare de care au parte dragii nostri ferimieri, 
+      cei care muncesc cu drag pamantul,bun stravechi, pentru a produce bucate cat mai naturale!</p>
+  </div>
+
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2017</h2>
+        <p>Lorem ipsum..</p>
       </div>
-
-      <div class="middle-text">
-        <p ><b>Un adevarat fermier</b> <br> se gandeste cu drag la realizarile pe care le-a adunat, dorind sa atinga si mai multe teluri. 
-        De aceea aceasta platforma este o inovatie; ea leaga fermieri de peste tot din tara, atingand nivelul de Comunitate. Daca doresti sa devii membru al
-        acestei familii prospere, este doar un pas de facut.</p>
-          <button type="button" class="membership" onClick="on()"><b>Devino membru chiar acum!</b></button>
+    </div>
+    
+    <div class="container right">
+      <div class="content">
+        <h2>2016</h2>
+        <p>Lorem ipsum..</p>
+      </div>
     </div>
 
-    <footer class="myFooter">
-     <a href="#instagram" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-     <a href="#instagram" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-     <a href="#instagram" class="fa-icons"> <i class="fa fa-share" aria-hidden="true"></i></a>
-     <a href="index.html" class="fa-icons"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-     <p class="copyright">Created by Panainte Andrei, Mariciuc Ioan and Cristi Cerbu.</p>
-    </footer>
+    <div class="container left">
+      <div class="content">
+          <h2>2018</h2>
+          <p>Lorem ipsum..</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="middle-text">
+    <p><b>Un adevarat fermier</b> <br> se gandeste cu drag la realizarile pe care le-a adunat, dorind sa atinga si mai multe teluri. 
+    De aceea aceasta platforma este o inovatie; ea leaga fermieri de peste tot din tara, atingand nivelul de Comunitate. Daca doresti sa devii membru al
+    acestei familii prospere, este doar un pas de facut.</p>
+    
+    <button type="button" class="membership" onClick="on()"><b>Devino membru chiar acum!</b></button>
+  </div>
+
+  <footer class="myFooter">
+    <a href="#instagram" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#instagram" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#instagram" class="fa-icons"> <i class="fa fa-share" aria-hidden="true"></i></a>
+    <a href="index.html" class="fa-icons"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    <p class="copyright">Created by Panainte Andrei, Mariciuc Ioan and Cristi Cerbu.</p>
+  </footer>
 
 
     <!-- Overlay become member -->
-    <div id="overlay">
-      <div class="user">
-        <header class="user__header">
-          
-          <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
-        </header>
+  <div id="overlay">
+    <div class="user">
+      <header class="user__header">
+        <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
+      </header>
       
-        <form class="form">
-          <div class="form__group">
-              <input type="text" placeholder="Username" class="form__input" />
-          </div>
+      <form class="form">
+        <div class="form__group">
+          <input type="text" placeholder="Username" class="form__input" />
+        </div>
           
-          <div class="form__group">
-              <input type="email" placeholder="Email" class="form__input" />
-          </div>
+        <div class="form__group">
+          <input type="email" placeholder="Email" class="form__input" />
+        </div>
           
-          <div class="form__group">
-              <input type="password" placeholder="Password" class="form__input" />
-          </div>
+        <div class="form__group">
+          <input type="password" placeholder="Password" class="form__input" />
+        </div>
 
-          <div class= "form_group txt">
-              <textarea placeholder="De ce sunteti potrivit pentru a fi membru al echipei..." class="form__input"></textarea>
-          </div>
+        <div class= "form_group txt">
+          <textarea placeholder="De ce sunteti potrivit pentru a fi membru al echipei..." class="form__input"></textarea>
+        </div>
           
-          <button class="btn" type="button">Register</button>
-          <button class="btn close" type="button" onClick="off()">Go back</button>
-        </form>
-      </div>
+        <button class="btn" type="button">Register</button>
+        <button class="btn close" type="button" onClick="off()">Go back</button>
+      </form>
     </div>
+  </div>
 </body>
 
-<script src="index.js"></script>
+<script src="scripts/index.js"></script>
 <script src="scripts/overlay.js"></script>
 </html>

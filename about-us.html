@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="stylesheets/aboutus.css">
-    <link red="stylesheet" href="stylesheets/overlay.css">
-    <link rel="stylesheet" href="stylesheets/register-form.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <link rel="stylesheet" href="stylesheets/aboutus.css">
+  <link rel="stylesheet" href="stylesheets/overlay.css">
+  <link rel="stylesheet" href="stylesheets/register-form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div id="navbar">
-      <a href="#default" id="logo"><img src="logo.png" id="myLogo"></a>
-      <div id="navbar-right">
-        <a href="index.html"><b>Acasa</b></a>
-        <a href="#contact"><b>Contact</b></a>
-        <a class="active" href="about-us.html"><b>Despre noi</b></a>
-      </div>
-    </div>
+  <div class="topnav" id="myTopnav">
+    <img src="images/logo.png" id="myLogo">
+    <a href="about-us.html" class="active"><b>Despre noi</b></a>
+    <a href="#media"><b>Media</b></a>
+    <a href="index.html"><b>Acasa</b></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
-    <div style="margin-top:130px;padding:15px 15px">
+  <div id="accordions">
     <button class="accordion-info">Motivatie...</button>
     <div class="accordion-panel">
       Scopul acestei platforme este de a oferi informatii agricultorilor romani, atat incepatori 
@@ -42,77 +43,71 @@
       Comunitatea noastra este formata din voluntari care doresc sa ajute la 
       prosperitatea agricultorilor, deci <b>costurile sunt 0!</b>
     </div>
+  </div>
 
-    <center style="margin-top: 5vw; margin-bottom: 3vw;">
-      <h2>Echipa</h2>
-    </center>
+  <h2 id="team-text">Echipa</h2>
 
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="/images/members/ioan.jpg" alt="Ioan" style="width:100%">
-          <div class="container-card">
-            <h2>Mariciuc Ioan</h2>
-            <p class="title">Sefu la sugaci</p>
-            <p>mmmariciuc223@gmail.com</p>
-            <p><a href="https://www.facebook.com/profile.php?id=100010125104369" target="_blank"><button class="button">Facebook</button></a></p>
-          </div>
-        </div>
-      </div>
-    
-      <div class="column">
-        <div class="card">
-          <img src="/images/members/andrei.jpg" alt="Andrei" style="width:100%">
-          <div class="container-card">
-            <h2>Panainte Andrei</h2>
-            <p class="title">Sugaci</p>
-            <p>andreipnt10@gmail.com</p>
-            <p><a href="https://www.facebook.com/andrei.panainte.39" target="_blank"><button class="button">Facebook</button></a></p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="column">
-        <div class="card">
-          <img src="/images/members/cerbu.jpg" alt="Cerbu" style="width:100%">
-          <div class="container-card">
-            <h2>Cerbu Cristi</h2>
-            <p class="title">Sugaci</p>
-            <p>example@example.com</p>
-            <p><a href="https://www.facebook.com/cristian.cerbu.9" target="_blank"><button class="button">Facebook</button></a></p>
-          </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="/images/members/ioan.jpg" alt="Ioan" style="width:100%">
+        <div class="container-card">
+          <h2>Mariciuc Ioan</h2>
+          <p class="title">Sefu la sugaci</p>
+          <p>mmmariciuc223@gmail.com</p>
+          <p><a href="https://www.facebook.com/profile.php?id=100010125104369" target="_blank"><button class="button">Facebook</button></a></p>
         </div>
       </div>
     </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="/images/members/andrei.jpg" alt="Andrei" style="width:100%">
+        <div class="container-card">
+          <h2>Panainte Andrei</h2>
+          <p class="title">Sugaci</p>
+          <p>andreipnt10@gmail.com</p>
+          <p><a href="https://www.facebook.com/andrei.panainte.39" target="_blank"><button class="button">Facebook</button></a></p>
+        </div>
+      </div>
+    </div>
+      
+    <div class="column">
+      <div class="card">
+        <img src="/images/members/cerbu.jpg" alt="Cerbu" style="width:100%">
+        <div class="container-card">
+          <h2>Cerbu Cristi</h2>
+          <p class="title">Sugaci</p>
+          <p>example@example.com</p>
+          <p><a href="https://www.facebook.com/cristian.cerbu.9" target="_blank"><button class="button">Facebook</button></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <button type="button" class="contact" onClick="on()"><b>Contacteaza-ne</b></button>
     
-    <!-- Overlay become member -->
+  <!-- Overlay become member -->
   <div id="overlay">
     <div class="user">
       <header class="user__header">
-        
-        <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
+        <h1 class="user__title"><b>Vrei sa transmiti un mesaj echipei ?</b></h1>
       </header>
-    
+      
       <form class="form">
         <div class="form__group">
-            <input type="text" placeholder="Username" class="form__input" />
+          <input type="text" placeholder="Full name" class="form__input" />
         </div>
-        
+          
         <div class="form__group">
-            <input type="email" placeholder="Email" class="form__input" />
-        </div>
-        
-        <div class="form__group">
-            <input type="password" placeholder="Password" class="form__input" />
+          <input type="email" placeholder="Email" class="form__input" />
         </div>
 
         <div class= "form_group txt">
-            <textarea placeholder="De ce sunteti potrivit pentru a fi membru al echipei..." class="form__input"></textarea>
+          <textarea placeholder="Mesajul dumneavoastra..." class="form__input"></textarea>
         </div>
-        
-        <button class="btn" type="button">Register</button>
+          
+        <button class="btn" type="button">Send</button>
         <button class="btn close" type="button" onClick="off()">Go back</button>
       </form>
     </div>
@@ -127,8 +122,8 @@
   </footer>
 </body>
 
-<script src="index.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/overlay.js"></script>
 <script src="scripts/about-us/accordion-nav.js"></script>
 <script src="scripts/about-us/navbar-shrink.js"></script>
-<script src="scripts/overlay.js"></script>
 </html>
