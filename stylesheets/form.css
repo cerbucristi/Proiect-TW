@@ -63,6 +63,7 @@ textarea {
     color: white;
     background: #86ac76;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .close {
