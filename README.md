@@ -8,5 +8,4 @@ TO-DO:
 - Make the chat pop-up and style it
 - Change colors to match the color scheme on every page
 - Change sign up form and contact form styles
-- Code the remaining scripts for the frontend (slides change animations, slides write effect...)
 - Make the raports
