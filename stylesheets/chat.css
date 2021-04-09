@@ -6,9 +6,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .open-button {
   background-color: rgb(212, 226, 10);
   color: white;
+  border:10px solid #99994d;
+  border-radius: 20px;
   padding: 16px 20px;
-  border: 8px solid #99994d;
-  border-radius:40px;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
@@ -23,8 +23,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   position: fixed;
   bottom: 13px;
   right: 15px;
-  border: 10px solid #f56eb1;
-  border-radius:20px;
   z-index: 9;
 }
 
@@ -32,19 +30,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container {
   max-width: 300px;
   background-color: rgb(228, 15, 15);
+  border: 10px solid #4CAF50;
+  border-radius: 20px;
+
   
   
 }
 
 /* Full-width textarea */
 .form-container textarea {
-  width: 100%;
+  width: 80%;
   padding: 15px;
+  padding-left: 1px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
   resize: none;
-  min-height: 200px;
+  min-height: 50px;
 }
 
 /* When the textarea gets focus, do something */
@@ -55,12 +57,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for the submit/send button */
 .form-container .btn {
+  position:relative;
   background-color: #4CAF50;
   color: white;
-  padding: 16px 20px;
-  border: none;
+  padding: auto;
+  border: 3px solid #99994d;
+  border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
   margin-bottom:10px;
   opacity: 0.8;
 }
