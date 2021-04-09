@@ -10,4 +10,6 @@ TO-DO:
 - Change sign up form and contact form styles
 - Clean up code in css files
 - Code the remaining scripts for the frontend (slides change animations, slides write effect...)
+- Complete text information in the index page
+- Add more accordion information on the "Despre noi" page
 - Make the raports
