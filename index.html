@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="stylesheets/index.css">
   <link rel="stylesheet" href="stylesheets/overlay.css">
   <link rel="stylesheet" href="stylesheets/form.css">
+  <link rel="stylesheet" href="stylesheets/chat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,8 @@
     <img src="images/logo.png" id="logo" onClick="onLogoClick()">
     <a href="about-us.html"><b>Despre noi</b></a>
     <a href="#media"><b>Media</b></a>
-    <a href="#home" class="active"><b>Acasa</b></a>
+    <a href="index.html" class="active"><b>Acasa</b></a>
+    <span onClick="onMemberClick()">Switch to member</span>
     <a href="javascript:void(0);" class="icon" onclick="responsiveIcon()">
       <i class="fa fa-bars"></i>
     </a>
@@ -99,12 +101,12 @@
     <a href="#" class="fa-icons"> <i class="fa fa-tumblr" aria-hidden="true"></i></a>
     <a href="#" class="fa-icons"> <i class="fa fa-yahoo" aria-hidden="true"></i></a>
     <p>Created by a passionate team.<br>
-      &#169; All rights reserved.</p>
+      &#169; All rights reserved. </i></p>
   </footer>
 
 
     <!-- Overlay become member -->
-  <div class="overlay">
+  <div id="overlay">
     <div class="user">
       <header class="user__header">
         <h1 class="user__title"><b>Vrei sa devii un membru al echipei ? Inregistreaza-te!</b></h1>
@@ -132,9 +134,44 @@
       </form>
     </div>
   </div>
+
+    <!-- Chat -->
+
+  <img src="images/support-chat.png" class="open-button" onclick="openChat()">
+
+  <div class="chat-popup" id="chatForm">
+    <form action="/action_page.php" class="form-container">
+      <div> <!-- Avatar div -->
+        <img src="images/avatars/robot-avatar.png" alt="Avatar" class="avatar">
+        <b>Fermabot</b>
+      </div>
+
+      <div class="message">
+        <img src="images/avatars/robot-avatar.png" alt="Avatar">
+        <p>Hello. I am Farmabot and I would love to help you ? Do you need some piece of information ?</p>
+      </div>
+
+      <div class="message hidden">
+        <img src="images/avatars/human-avatar.png" alt="Avatar" class="right">
+        <p>Placeholder text for a new message sometime in the future.</p>
+      </div>
+
+      <div class="message hidden">
+        <img src="images/avatars/robot-avatar.png" alt="Avatar">
+        <p>Placeholder text for a new message sometime in the future.</p>
+      </div>
+  
+      <div class="user-input">
+        <hr>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </div>
+    </form>
+  </div> 
 </body>
 
 <script src="scripts/navbar.js"></script>
 <script src="scripts/slideshow.js"></script>
 <script src="scripts/overlay.js"></script>
+<script src="scripts/chat.js"></script>
 </html>

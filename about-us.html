@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="stylesheets/aboutus.css">
   <link rel="stylesheet" href="stylesheets/overlay.css">
   <link rel="stylesheet" href="stylesheets/form.css">
+  <link rel="stylesheet" href="stylesheets/chat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,8 @@
     <a href="about-us.html" class="active"><b>Despre noi</b></a>
     <a href="#media"><b>Media</b></a>
     <a href="index.html"><b>Acasa</b></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <span onClick="onMemberClick()">Switch to member</span>
+    <a href="javascript:void(0);" class="icon" onclick="responsiveIcon()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
@@ -108,7 +110,7 @@
   </span>
     
   <!-- Overlay become member -->
-  <div class="overlay">
+  <div id="overlay">
     <div class="user">
       <header class="user__header">
         <h1 class="user__title"><b>Vrei sa transmiti un mesaj echipei ?</b></h1>
@@ -133,6 +135,22 @@
     </div>
   </div>
 
+    <!-- Chat -->
+
+  <img src="images/support-chat.png"/ class="open-button" onclick="openChat()">
+
+  <div class="chat-popup" id="chatForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Chat</h1>
+  
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+    
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeChat()">Close</button>
+    </form>
+  </div> 
+
   <footer>
     <a href="#" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
     <a href="#" class="fa-icons"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -149,4 +167,5 @@
 <script src="scripts/navbar.js"></script>
 <script src="scripts/overlay.js"></script>
 <script src="scripts/about-us/accordion-nav.js"></script>
+<script src="scripts/chat.js"></script>
 </html>

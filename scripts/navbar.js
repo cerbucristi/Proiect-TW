@@ -9,3 +9,7 @@ function responsiveIcon() {
 function onLogoClick() {
   window.open("index.html", "_self");
 }
+
+function onMemberClick() {
+  window.open("staff.html", "_self");
+}
