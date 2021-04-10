@@ -53,7 +53,7 @@
     animation-duration: 1.5s;
 }
 
-@media screen and (max-width : 600px){
+@media screen and (max-width : 650px){
     .text{
         font-size: 1.5em;
     }
@@ -85,7 +85,7 @@
     animation: bounce 2s infinite;
 }
 
-@media screen and (max-width : 600px){
+@media screen and (max-width : 650px){
     .middle-text {
         display:block;
     }
@@ -189,7 +189,7 @@
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .timeline::after {
         left: 31px;
     }

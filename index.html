@@ -141,29 +141,27 @@
 
   <div class="chat-popup" id="chatForm">
     <form action="/action_page.php" class="form-container">
-      <div> <!-- Avatar div -->
+      <div id="chat-header"> <!-- Avatar div -->
         <img src="images/avatars/robot-avatar.png" alt="Avatar" class="avatar">
         <b>Fermabot</b>
+        <b id="close" onclick="closeChat()">&#10006;</b>
       </div>
 
-      <div class="message">
-        <img src="images/avatars/robot-avatar.png" alt="Avatar">
-        <p>Hello. I am Farmabot and I would love to help you ? Do you need some piece of information ?</p>
-      </div>
+      <div id="chat-messages">
+        <div class="message" id="left">
+          <img src="images/avatars/robot-avatar.png" alt="Avatar">
+          <p>Hello there, I am Farmabot and I would love to help you! Do you need some piece of information ?</p>
+        </div>
 
-      <div class="message hidden">
-        <img src="images/avatars/human-avatar.png" alt="Avatar" class="right">
-        <p>Placeholder text for a new message sometime in the future.</p>
-      </div>
-
-      <div class="message hidden">
-        <img src="images/avatars/robot-avatar.png" alt="Avatar">
-        <p>Placeholder text for a new message sometime in the future.</p>
+        <div class="message" id="right">
+          <img src="images/avatars/human-avatar.png" alt="Avatar" class="right">
+          <p>Placeholder text for a new message sometime in the future.</p>
+        </div>
       </div>
   
-      <div class="user-input">
+      <div class="chat-user-input">
         <hr>
-        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <textarea id="text-message" placeholder="Type message.." name="msg" required></textarea>
         <button type="submit" class="btn">Send</button>
       </div>
     </form>
