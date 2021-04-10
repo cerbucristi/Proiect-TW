@@ -137,19 +137,37 @@
 
     <!-- Chat -->
 
-  <img src="images/support-chat.png"/ class="open-button" onclick="openChat()">
+    <img src="images/support-chat.png" class="open-button" onclick="openChat()">
 
-  <div class="chat-popup" id="chatForm">
-    <form action="/action_page.php" class="form-container">
-      <h1>Chat</h1>
+    <div class="chat-popup" id="chatForm">
+      <form action="/action_page.php" class="form-container">
+        <div> <!-- Avatar div -->
+          <img src="images/avatars/robot-avatar.png" alt="Avatar" class="avatar">
+          <b>Fermabot</b>
+        </div>
   
-      <label for="msg"><b>Message</b></label>
-      <textarea placeholder="Type message.." name="msg" required></textarea>
+        <div class="message">
+          <img src="images/avatars/robot-avatar.png" alt="Avatar">
+          <p>Hello. I am Farmabot and I would love to help you ? Do you need some piece of information ?</p>
+        </div>
+  
+        <div class="message hidden">
+          <img src="images/avatars/human-avatar.png" alt="Avatar" class="right">
+          <p>Placeholder text for a new message sometime in the future.</p>
+        </div>
+  
+        <div class="message hidden">
+          <img src="images/avatars/robot-avatar.png" alt="Avatar">
+          <p>Placeholder text for a new message sometime in the future.</p>
+        </div>
     
-      <button type="submit" class="btn">Send</button>
-      <button type="button" class="btn cancel" onclick="closeChat()">Close</button>
-    </form>
-  </div> 
+        <div class="user-input">
+          <hr>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </div>
+      </form>
+    </div> 
 
   <footer>
     <a href="#" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
