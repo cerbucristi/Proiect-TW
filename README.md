@@ -1,4 +1,3 @@
-
  * [Introduction](#1-introduction)
     * 1.1 [Purpose](#11-purpose)
     * 1.2 [Intended Audience and Reading Suggestions](#12-intended-audience-and-reading-suggestions)
