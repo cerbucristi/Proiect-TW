@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="stylesheets/chat.css">
     <link rel="stylesheet" href="stylesheets/Media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <meta charset="UTF-8">
@@ -11,8 +12,8 @@
 <body>
     <div class="topnav" id="navigation-bar">
         <img src="images/logo.png" id="logo" onClick="onLogoClick()">
-        <a href="about-us.html" class="active"><b>Despre noi</b></a>
-        <a href="#media"><b>Media</b></a>
+        <a href="about-us.html"><b>Despre noi</b></a>
+        <a href="Media.html" class="active"><b>Media</b></a>
         <a href="index.html"><b>Acasa</b></a>
         <a href="member.html" class="member-btn"><b>Switch to member</b></a>
         <a href="javascript:void(0);" class="icon" onclick="responsiveIcon()">
@@ -100,6 +101,38 @@
                 atricolele noastre informative despre produsele de mare interes ale momentului. </p>
               </div>
         </div>
+
+      <!-- Chat -->
+
+      <img src="images/support-chat.png" class="open-button" onclick="openChat()">
+
+  <div class="chat-popup" id="chatForm">
+    <form action="/action_page.php" class="form-container">
+      <div id="chat-header"> <!-- Avatar div -->
+        <img src="images/avatars/robot-avatar.png" alt="Avatar" class="avatar">
+        <b>Fermabot</b>
+        <b id="close" onclick="closeChat()">&#10006;</b>
+      </div>
+
+      <div id="chat-messages">
+        <div class="message" id="left">
+          <img src="images/avatars/robot-avatar.png" alt="Avatar">
+          <p>Hello there, I am Farmabot and I would love to help you! Do you need some piece of information ?</p>
+        </div>
+
+        <div class="message" id="right">
+          <img src="images/avatars/human-avatar.png" alt="Avatar" class="right">
+          <p>Placeholder text for a new message sometime in the future.</p>
+        </div>
+      </div>
+  
+      <div class="chat-user-input">
+        <hr>
+        <textarea id="text-message" placeholder="Type message.." name="msg" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </div>
+    </form>
+  </div>
       
       <footer>
         <a href="#" class="fa-icons"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -116,4 +149,5 @@
 </body>
 
 <script src="scripts/Media.js"></script>
+<script src="scripts/chat.js"></script>
 </html>

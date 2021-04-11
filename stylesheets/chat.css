@@ -71,6 +71,10 @@
   scroll-behavior: smooth;
 }
 
+#chat-messages::-webkit-scrollbar {
+  background: transparent;
+}
+
 .chat-user-input { 
   min-height: 30%;
   max-height: 30%;
