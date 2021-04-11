@@ -13,7 +13,7 @@
     * 3.2 [Developing Team](#32-developing-team)
 
 
-### 1 Purpose
+### Purpose
 ### 1.1 Purpose
 We provided a web-application which allows the administrators of a company to communicate in real time - 1 to 1 or 1 to N - with the users. On this platform you can ask for help from our support team, you can meet us, read the latest news and see specialized articles, also you can become a member in our platform, enlarging our team.    
    
@@ -24,7 +24,7 @@ Our goal is to find as many people as possible about the platform, so everyone w
 ### 1.4 References
 Documents and Web addresses that refers and/or includes user interface style guides, tutorials that might help, useful techniques and styling technologies
 
-### 2 Overall Description
+### Overall Description
 ### 2.1 Product Perspective
 We created this platform to combine the useful with the pleasant. We have a well-arranged and developed platform to present the beauty of farming in Romania, and for those who are really passionate, we also offer the possibility to join us in Casa Fermierilor.
 ### 2.2 Product Functions
@@ -34,7 +34,7 @@ To make this web application, so far I have used HTML5, CSS4 and Javascript. Wit
 ### 2.4 User Classes and Characteristics
 The content is mostly framed in container type elements, especially <code>div</code>. In order to stylize everything as aesthetically as possible, we used classes and ids to link the content in HTML with that in CSS, so that each container in HTML has a class assigned.
 
-### 3 Others
+### Others
 ### 3.1 Incoming...
 This web-application has a lot to offer, but only the Frontend is ready so far. But the incoming functionalities which will be implemented on this platform are on back-end field. 
 ### 3.2 Developing team
