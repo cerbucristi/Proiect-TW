@@ -4,7 +4,7 @@
 
 .open-button {
   position: fixed;
-  max-width: 10vw;
+  max-width: 10vh;
   max-height: 10vh;
   cursor: pointer;
   bottom: 5vh;
@@ -18,18 +18,30 @@
   right: 2vw;
   z-index: 80;
 
+  height: 70%;
+  width: 25%;
+
   border: 0.3em solid #666633;
   border-radius: 2em;
+
+  z-index: 102;
+}
+
+#close {
+  float:right;
+  font-size: 2em;
+  color: #9b3535EE;
+  cursor:pointer;
 }
 
 .form-container {
-  min-width: 25vw;
-  max-width: 30vw;
-  max-height: 80vh;
+  height:100%;
+  width:100%;
   border: 0.3em solid #666633;
   border-radius: 2em;
   padding: 1em;
   background-color: white;
+  overflow:hidden;
 }
 
 .avatar {
@@ -37,6 +49,36 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+
+  border-left: 0.25em solid lightblue;
+  border-right: 0.25em solid lightblue;
+}
+
+#chat-header {
+  min-height: 10%;
+  max-height: 10%;
+}
+
+#chat-messages {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  min-height: 50%;
+  max-height: 50%;
+  
+  margin-top: 10%;
+
+  scroll-behavior: smooth;
+}
+
+.chat-user-input { 
+  min-height: 30%;
+  max-height: 30%;
+  
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .message {
@@ -44,7 +86,14 @@
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 0.5em 0.25em;
+}
+
+#left {
+  border-left: 0.25em solid lightblue;
+}
+#right {
+  border-right: 0.25em solid lightblue;
 }
 
 .message::after {
@@ -59,6 +108,8 @@
   width: 100%;
   margin-right: 20px;
   border-radius: 50%;
+  border-left: 0.25em solid lightblue;
+  border-right: 0.25em solid lightblue;
 }
 
 .message img.right {
@@ -71,47 +122,39 @@
   width: 100%;
 }
 
-.form-container .user-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Full-width textarea */
-.form-container textarea {
+#text-message {
+  height: 100em;
   width: 100%;
-  border: none;
   background: #f1f1f1;
+  border: none;
   resize: none;
-  min-height: 10px;
-  max-height: 100px;
 }
 
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
+#text-message:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
+  height: 20%;
   background-color: #4CAF50;
   color: white;
   padding: 0.75em;
   border: none;
   cursor: pointer;
-  margin-bottom:10px;
   opacity: 0.75;
 }
 
-@keyframes arrive {
-  0% {
-      opacity: 0;
-      transform: translate3d(0, 50px, 0);
+@media screen and (max-width : 650px) {
+  .chat-popup {
+    width: 100vw;
+    border: none;
+    right: 0;
   }
-  
-  100% {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 650px) and (max-width: 1024px) {
+  .chat-popup {
+    width:50%;
   }
 }

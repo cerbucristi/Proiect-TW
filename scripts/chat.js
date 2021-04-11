@@ -7,4 +7,4 @@ function openChat() {
   
 function closeChat() {
     x.display = "none";
-} 
+}
