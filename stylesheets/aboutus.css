@@ -71,11 +71,18 @@ body {
   
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+
   transition: .25s;
 }
 .card:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  
   transition: .5s;
 }
   
