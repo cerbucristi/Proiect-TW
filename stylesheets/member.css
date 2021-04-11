@@ -1,0 +1,80 @@
+html {
+    overflow:hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+.messages-box {
+    width:100%;
+    height:100%;
+    background-color: rgb(96, 139, 62);
+    overflow:hidden;
+}
+
+.heading {
+    background-color: rgb(136, 54, 54);
+    border-bottom: 1em solid #5a312d;
+    padding: 1em;
+}
+
+.left {
+    float: left;
+    width:40%;
+
+    color: white; 
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.right {
+    display: inline-block;
+    text-align: right;
+    width: 60%;
+}
+
+.right a {
+    color: rgb(39, 179, 69);
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.messages-list {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    padding: 1em;
+    overflow:hidden;
+    border-bottom: 1px ridge gray;
+    cursor:pointer;
+}
+
+h5 {
+    color: rgb(227, 229, 255);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#overlay {
+    display: block;
+    background-color: rgb(96, 139, 62);
+}
+
+.btn {
+    background-color: rgb(54, 54, 136);
+}
+.close {
+    background: rgb(136, 54, 54);
+}
+
+.user__title a {
+    color: #5a312d;
+}

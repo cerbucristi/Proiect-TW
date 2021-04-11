@@ -74,8 +74,8 @@
 
 .inner-media img{
   float: left;
-  border: 0.3em solid #666633;
-  border-radius: 5px;
+  border: .25em solid #666633;
+  margin-right: 2em;
 }
 
 .inner-media img:hover {
@@ -148,7 +148,14 @@
 }
 
 @media screen and (max-width: 1024px) {
+
+  .inner-media {
+    display: block;
+  }
+
   .inner-media img {
-    display: none;
+    margin-bottom: 1em;
+    width: 20em;
+    margin-left: 5vw;
   }
 }
